@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<mtk_agps_profiles maj_ver="1" min_ver="2">
+  <!-- Refer to agps_profiles_conf2.xml for values not provided in this file.
+       cur_supl_profile is supported but other supl_profile are ignored.
+       auto_profile_enable is not supported.
+  -->
+
+  <cur_supl_profile name="Docomo"
+      addr=""
+      port="7275"
+      tls="true"
+  />
+
+  <agps_setting
+  />
+
+  <!-- MOTO CODE BEGIN-IKSWUDCM-149, Support A-GNSS capacity for DCM Carrier. -->
+  <gnss_setting
+    a_glonass_satellite_enable="true"
+  />
+  <!-- MOTO CODE END-IKSWUDCM-149 -->
+
+  <cp_setting
+  />
+
+  <!-- MOTO CODE BEGIN-IKSWU-130718, QoP information should not be added in the SUPL Start. -->
+  <up_setting
+    imsi_enable="true"
+    qop_hacc="0"
+  />
+  <!-- MOTO CODE END-IKSWU-130718 -->
+</mtk_agps_profiles>

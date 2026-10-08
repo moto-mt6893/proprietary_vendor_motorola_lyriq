@@ -1,0 +1,10 @@
+<!--
+    Input:
+        motorola/hardware/interfaces/camera/imgtuner/aidl/default/motorola.hardware.camera.imgtuner.aidl.xml
+-->
+<manifest version="8.0" type="device">
+    <hal format="aidl">
+        <name>motorola.hardware.camera.imgtuner.aidl</name>
+        <fqname>IImageTuning/default</fqname>
+    </hal>
+</manifest>

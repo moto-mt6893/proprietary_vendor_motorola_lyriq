@@ -1,0 +1,13 @@
+libancbase_rt_fusion.so
+libAncHumanSegFigureFusion.so
+libdla_loader.so
+libportrait_repair_ppl3_ocl.so
+libBSTAiScene.so
+
+libBSTDSLR.so
+
+libOpenCL.so
+libnir_neon_driver_ndk.mtk.vndk.so
+libcmdl_ndk.mtk.vndk.so
+libarmnn_ndk.mtk.vndk.so
+libOpenCL.so
