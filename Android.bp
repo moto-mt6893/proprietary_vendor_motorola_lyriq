@@ -24600,9 +24600,9 @@ prebuilt_etc_xml {
 }
 
 prebuilt_etc_xml {
-    name: "manifest_media_c2_>",
+    name: "manifest_media_c2_default.xml",
     owner: "motorola",
-    src: "proprietary/vendor/etc/vintf/manifest/manifest_media_c2_>",
+    src: "proprietary/vendor/etc/vintf/manifest/manifest_media_c2_default.xml",
     filename_from_src: true,
     sub_dir: "vintf/manifest",
     soc_specific: true,

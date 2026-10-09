@@ -1269,7 +1269,7 @@ PRODUCT_PACKAGES += \
     manifest_apuware_utils_aidl.xml \
     manifest_apuware_xrp_aidl.xml \
     manifest_hwcomposer.xml \
-    manifest_media_c2_> \
+    manifest_media_c2_default.xml \
     mapper.mediatek.xml \
     motorola.hardware.audio.radar2.xml \
     motorola.hardware.camera.imgtuner.aidl.xml \

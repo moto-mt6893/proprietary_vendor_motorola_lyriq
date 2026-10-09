@@ -6,6 +6,5 @@
     <hal format="aidl">
         <name>android.hardware.media.c2</name>
         <fqname>IComponentStore/default</fqname>
-        <fqname>IComponentStore/default9</fqname>
     </hal>
 </manifest>
