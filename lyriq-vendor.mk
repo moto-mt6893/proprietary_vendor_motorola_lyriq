@@ -14,6 +14,7 @@ PRODUCT_COPY_FILES += \
     vendor/motorola/lyriq/proprietary/system/etc/public.libraries-mtk.txt:$(TARGET_COPY_OUT_SYSTEM)/etc/public.libraries-mtk.txt \
     vendor/motorola/lyriq/proprietary/system_ext/etc/init/android.hardware.audio.parameter_parser.service.rc:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/init/android.hardware.audio.parameter_parser.service.rc \
     vendor/motorola/lyriq/proprietary/system_ext/etc/init/init.vtservice.rc:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/init/init.vtservice.rc \
+    vendor/motorola/lyriq/proprietary/system_ext/etc/sysconfig/com.mediatek.ims.config.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/sysconfig/com.mediatek.ims.config.xml \
     vendor/motorola/lyriq/proprietary/vendor/app/mcRegistry/020f0000000000000000000000000000.drbin:$(TARGET_COPY_OUT_VENDOR)/app/mcRegistry/020f0000000000000000000000000000.drbin \
     vendor/motorola/lyriq/proprietary/vendor/app/mcRegistry/020f0000000000000000000000000000.tlbin:$(TARGET_COPY_OUT_VENDOR)/app/mcRegistry/020f0000000000000000000000000000.tlbin \
     vendor/motorola/lyriq/proprietary/vendor/app/mcRegistry/031c0000000000000000000000000000.drbin:$(TARGET_COPY_OUT_VENDOR)/app/mcRegistry/031c0000000000000000000000000000.drbin \
@@ -1126,9 +1127,6 @@ PRODUCT_PACKAGES += \
     vendor.mediatek.hardware.apuware.apusys-V5-ndk_vendor \
     vendor.mediatek.hardware.apuware.utils-V1-ndk_vendor \
     vendor.mediatek.hardware.apuware.xrp-V1-ndk_vendor \
-    vendor.mediatek.hardware.bluetooth.audio-V1-ndk \
-    vendor.mediatek.hardware.bluetooth.audio@2.1 \
-    vendor.mediatek.hardware.bluetooth.audio@2.2 \
     vendor.mediatek.hardware.camera.atms-V1-ndk \
     vendor.mediatek.hardware.camera.bgservice-V1-ndk \
     vendor.mediatek.hardware.camera.frhandler@1.0 \
@@ -1269,7 +1267,7 @@ PRODUCT_PACKAGES += \
     manifest_apuware_utils_aidl.xml \
     manifest_apuware_xrp_aidl.xml \
     manifest_hwcomposer.xml \
-    manifest_media_c2_> \
+    manifest_media_c2_default.xml \
     mapper.mediatek.xml \
     motorola.hardware.audio.radar2.xml \
     motorola.hardware.camera.imgtuner.aidl.xml \
