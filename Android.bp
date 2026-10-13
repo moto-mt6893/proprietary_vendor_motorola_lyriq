@@ -21036,95 +21036,6 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "vendor.mediatek.hardware.bluetooth.audio-V1-ndk",
-    owner: "motorola",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/vendor.mediatek.hardware.bluetooth.audio-V1-ndk.so",
-            ],
-            shared_libs: [
-                "libbinder_ndk",
-                "android.hardware.common-V2-ndk",
-                "android.hardware.common.fmq-V1-ndk",
-                "android.hardware.audio.common-V3-ndk",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "vendor.mediatek.hardware.bluetooth.audio@2.1",
-    owner: "motorola",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/vendor.mediatek.hardware.bluetooth.audio@2.1.so",
-            ],
-            shared_libs: [
-                "android.hardware.audio.common@5.0",
-                "android.hidl.safe_union@1.0",
-                "libhidlbase",
-                "liblog",
-                "libutils",
-                "libcutils",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "vendor.mediatek.hardware.bluetooth.audio@2.2",
-    owner: "motorola",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/vendor.mediatek.hardware.bluetooth.audio@2.2.so",
-            ],
-            shared_libs: [
-                "android.hardware.audio.common@5.0",
-                "vendor.mediatek.hardware.bluetooth.audio@2.1",
-                "android.hidl.safe_union@1.0",
-                "libhidlbase",
-                "liblog",
-                "libutils",
-                "libcutils",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
     name: "vendor.mediatek.hardware.camera.atms-V1-ndk",
     owner: "motorola",
     strip: {
@@ -24421,27 +24332,26 @@ android_app_import {
 }
 
 dex_import {
-    name: "moto-telephony",
-    owner: "motorola",
-    jars: [
-        "proprietary/system/framework/moto-telephony.jar",
-    ],
-}
-
-dex_import {
     name: "mediatek-ims-base",
     owner: "motorola",
     jars: [
-        "proprietary/system_ext/framework/mediatek-ims-base.jar",
+        "proprietary/system/framework/mediatek-ims-base.jar",
     ],
-    system_ext_specific: true,
 }
 
 dex_import {
-    name: "mediatek-ims-oem-plugin",
+    name: "mediatek-telephony-base",
     owner: "motorola",
     jars: [
-        "proprietary/system_ext/framework/mediatek-ims-oem-plugin.jar",
+        "proprietary/system/framework/mediatek-telephony-base.jar",
+    ],
+}
+
+dex_import {
+    name: "mediatek-ims-extension-plugin",
+    owner: "motorola",
+    jars: [
+        "proprietary/system_ext/framework/mediatek-ims-extension-plugin.jar",
     ],
     system_ext_specific: true,
 }

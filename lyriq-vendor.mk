@@ -6,14 +6,15 @@ PRODUCT_SOONG_NAMESPACES += \
     vendor/motorola/lyriq
 
 PRODUCT_COPY_FILES += \
+    vendor/motorola/lyriq/proprietary/W## Proprietary files are from moto edge 40 (lyriq_g-user 15 V1TLS35.73-60-3-14 89e5f),:$(TARGET_COPY_OUT_W## PROPRIETARY FILES ARE FROM MOTO EDGE 40 (LYRIQ_G-USER 15 V1TLS35.73-60-3-14 89E5F),) \
     vendor/motorola/lyriq/proprietary/product/etc/felica/common.cfg:$(TARGET_COPY_OUT_PRODUCT)/etc/felica/common.cfg \
     vendor/motorola/lyriq/proprietary/product/etc/felica/mfm.cfg:$(TARGET_COPY_OUT_PRODUCT)/etc/felica/mfm.cfg \
     vendor/motorola/lyriq/proprietary/product/etc/felica/mfs.cfg:$(TARGET_COPY_OUT_PRODUCT)/etc/felica/mfs.cfg \
     vendor/motorola/lyriq/proprietary/product/etc/permissions/privapp-permissions-com.google.android.euicc.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/privapp-permissions-com.google.android.euicc.xml \
-    vendor/motorola/lyriq/proprietary/system/etc/permissions/moto-telephony.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/moto-telephony.xml \
     vendor/motorola/lyriq/proprietary/system/etc/public.libraries-mtk.txt:$(TARGET_COPY_OUT_SYSTEM)/etc/public.libraries-mtk.txt \
     vendor/motorola/lyriq/proprietary/system_ext/etc/init/android.hardware.audio.parameter_parser.service.rc:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/init/android.hardware.audio.parameter_parser.service.rc \
     vendor/motorola/lyriq/proprietary/system_ext/etc/init/init.vtservice.rc:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/init/init.vtservice.rc \
+    vendor/motorola/lyriq/proprietary/system_ext/etc/sysconfig/com.mediatek.ims.config.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/sysconfig/com.mediatek.ims.config.xml \
     vendor/motorola/lyriq/proprietary/vendor/app/mcRegistry/020f0000000000000000000000000000.drbin:$(TARGET_COPY_OUT_VENDOR)/app/mcRegistry/020f0000000000000000000000000000.drbin \
     vendor/motorola/lyriq/proprietary/vendor/app/mcRegistry/020f0000000000000000000000000000.tlbin:$(TARGET_COPY_OUT_VENDOR)/app/mcRegistry/020f0000000000000000000000000000.tlbin \
     vendor/motorola/lyriq/proprietary/vendor/app/mcRegistry/031c0000000000000000000000000000.drbin:$(TARGET_COPY_OUT_VENDOR)/app/mcRegistry/031c0000000000000000000000000000.drbin \
@@ -1126,9 +1127,6 @@ PRODUCT_PACKAGES += \
     vendor.mediatek.hardware.apuware.apusys-V5-ndk_vendor \
     vendor.mediatek.hardware.apuware.utils-V1-ndk_vendor \
     vendor.mediatek.hardware.apuware.xrp-V1-ndk_vendor \
-    vendor.mediatek.hardware.bluetooth.audio-V1-ndk \
-    vendor.mediatek.hardware.bluetooth.audio@2.1 \
-    vendor.mediatek.hardware.bluetooth.audio@2.2 \
     vendor.mediatek.hardware.camera.atms-V1-ndk \
     vendor.mediatek.hardware.camera.bgservice-V1-ndk \
     vendor.mediatek.hardware.camera.frhandler@1.0 \
@@ -1249,9 +1247,9 @@ PRODUCT_PACKAGES += \
     ImsService \
     MtkGbaService \
     MtkTelephonyAssist \
-    moto-telephony \
     mediatek-ims-base \
-    mediatek-ims-oem-plugin \
+    mediatek-telephony-base \
+    mediatek-ims-extension-plugin \
     CommandService.xml \
     android.hardware.audio.effect.service-aidl.xml \
     android.hardware.audio.service-aidl.mediatek.xml \
@@ -1355,3 +1353,7 @@ PRODUCT_PACKAGES += \
     vendor_lib64_libnir_neon_driver_so \
     vendor_lib64_libpq_sec_so \
     vendor_lib64_libpqparamparser_so
+
+PRODUCT_BOOT_JARS += \
+    mediatek-ims-base \
+    mediatek-telephony-base
