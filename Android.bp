@@ -332,7 +332,7 @@ cc_prebuilt_library_shared {
                 "libfmq",
                 "liblog",
                 "libbluetooth_audio_session_aidl_mtk",
-                "vendor.mediatek.hardware.bluetooth.audio-V1-ndk",
+                "vendor.mediatek.hardware.bluetooth.audio-V3-ndk",
                 "vendor.mediatek.hardware.bluetooth.audio@2.1",
                 "vendor.mediatek.hardware.bluetooth.audio@2.2",
                 "libc++",
@@ -833,7 +833,7 @@ cc_prebuilt_library_shared {
                 "libhwbinder",
                 "vendor.mediatek.hardware.bluetooth.audio@2.1",
                 "vendor.mediatek.hardware.bluetooth.audio@2.2",
-                "vendor.mediatek.hardware.bluetooth.audio-V1-ndk",
+                "vendor.mediatek.hardware.bluetooth.audio-V3-ndk",
                 "android.hardware.bluetooth.audio-V4-ndk",
                 "android.hardware.audio.common@5.0",
                 "libsensorndkbridge",
@@ -9989,7 +9989,7 @@ cc_prebuilt_library_shared {
                 "libbinder_ndk",
                 "libfmq",
                 "liblog",
-                "vendor.mediatek.hardware.bluetooth.audio-V1-ndk",
+                "vendor.mediatek.hardware.bluetooth.audio-V3-ndk",
                 "libhidlbase",
                 "libxml2",
                 "libflatbuffers-cpp",
@@ -24332,26 +24332,27 @@ android_app_import {
 }
 
 dex_import {
+    name: "moto-telephony",
+    owner: "motorola",
+    jars: [
+        "proprietary/system/framework/moto-telephony.jar",
+    ],
+}
+
+dex_import {
     name: "mediatek-ims-base",
     owner: "motorola",
     jars: [
-        "proprietary/system/framework/mediatek-ims-base.jar",
+        "proprietary/system_ext/framework/mediatek-ims-base.jar",
     ],
+    system_ext_specific: true,
 }
 
 dex_import {
-    name: "mediatek-telephony-base",
+    name: "mediatek-ims-oem-plugin",
     owner: "motorola",
     jars: [
-        "proprietary/system/framework/mediatek-telephony-base.jar",
-    ],
-}
-
-dex_import {
-    name: "mediatek-ims-extension-plugin",
-    owner: "motorola",
-    jars: [
-        "proprietary/system_ext/framework/mediatek-ims-extension-plugin.jar",
+        "proprietary/system_ext/framework/mediatek-ims-oem-plugin.jar",
     ],
     system_ext_specific: true,
 }

@@ -6,11 +6,11 @@ PRODUCT_SOONG_NAMESPACES += \
     vendor/motorola/lyriq
 
 PRODUCT_COPY_FILES += \
-    vendor/motorola/lyriq/proprietary/W## Proprietary files are from moto edge 40 (lyriq_g-user 15 V1TLS35.73-60-3-14 89e5f),:$(TARGET_COPY_OUT_W## PROPRIETARY FILES ARE FROM MOTO EDGE 40 (LYRIQ_G-USER 15 V1TLS35.73-60-3-14 89E5F),) \
     vendor/motorola/lyriq/proprietary/product/etc/felica/common.cfg:$(TARGET_COPY_OUT_PRODUCT)/etc/felica/common.cfg \
     vendor/motorola/lyriq/proprietary/product/etc/felica/mfm.cfg:$(TARGET_COPY_OUT_PRODUCT)/etc/felica/mfm.cfg \
     vendor/motorola/lyriq/proprietary/product/etc/felica/mfs.cfg:$(TARGET_COPY_OUT_PRODUCT)/etc/felica/mfs.cfg \
     vendor/motorola/lyriq/proprietary/product/etc/permissions/privapp-permissions-com.google.android.euicc.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/privapp-permissions-com.google.android.euicc.xml \
+    vendor/motorola/lyriq/proprietary/system/etc/permissions/moto-telephony.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/moto-telephony.xml \
     vendor/motorola/lyriq/proprietary/system/etc/public.libraries-mtk.txt:$(TARGET_COPY_OUT_SYSTEM)/etc/public.libraries-mtk.txt \
     vendor/motorola/lyriq/proprietary/system_ext/etc/init/android.hardware.audio.parameter_parser.service.rc:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/init/android.hardware.audio.parameter_parser.service.rc \
     vendor/motorola/lyriq/proprietary/system_ext/etc/init/init.vtservice.rc:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/init/init.vtservice.rc \
@@ -1247,9 +1247,9 @@ PRODUCT_PACKAGES += \
     ImsService \
     MtkGbaService \
     MtkTelephonyAssist \
+    moto-telephony \
     mediatek-ims-base \
-    mediatek-telephony-base \
-    mediatek-ims-extension-plugin \
+    mediatek-ims-oem-plugin \
     CommandService.xml \
     android.hardware.audio.effect.service-aidl.xml \
     android.hardware.audio.service-aidl.mediatek.xml \
@@ -1353,7 +1353,3 @@ PRODUCT_PACKAGES += \
     vendor_lib64_libnir_neon_driver_so \
     vendor_lib64_libpq_sec_so \
     vendor_lib64_libpqparamparser_so
-
-PRODUCT_BOOT_JARS += \
-    mediatek-ims-base \
-    mediatek-telephony-base
