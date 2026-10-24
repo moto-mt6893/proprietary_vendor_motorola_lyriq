@@ -14,7 +14,6 @@ PRODUCT_COPY_FILES += \
     vendor/motorola/lyriq/proprietary/system/etc/public.libraries-mtk.txt:$(TARGET_COPY_OUT_SYSTEM)/etc/public.libraries-mtk.txt \
     vendor/motorola/lyriq/proprietary/system_ext/etc/init/android.hardware.audio.parameter_parser.service.rc:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/init/android.hardware.audio.parameter_parser.service.rc \
     vendor/motorola/lyriq/proprietary/system_ext/etc/init/init.vtservice.rc:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/init/init.vtservice.rc \
-    vendor/motorola/lyriq/proprietary/system_ext/etc/sysconfig/com.mediatek.ims.config.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/sysconfig/com.mediatek.ims.config.xml \
     vendor/motorola/lyriq/proprietary/vendor/app/mcRegistry/020f0000000000000000000000000000.drbin:$(TARGET_COPY_OUT_VENDOR)/app/mcRegistry/020f0000000000000000000000000000.drbin \
     vendor/motorola/lyriq/proprietary/vendor/app/mcRegistry/020f0000000000000000000000000000.tlbin:$(TARGET_COPY_OUT_VENDOR)/app/mcRegistry/020f0000000000000000000000000000.tlbin \
     vendor/motorola/lyriq/proprietary/vendor/app/mcRegistry/031c0000000000000000000000000000.drbin:$(TARGET_COPY_OUT_VENDOR)/app/mcRegistry/031c0000000000000000000000000000.drbin \
@@ -292,7 +291,6 @@ PRODUCT_COPY_FILES += \
     vendor/motorola/lyriq/proprietary/vendor/etc/init/mtk_storageproxyd.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/mtk_storageproxyd.rc \
     vendor/motorola/lyriq/proprietary/vendor/etc/init/mtkrild.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/mtkrild.rc \
     vendor/motorola/lyriq/proprietary/vendor/etc/init/muxreport.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/muxreport.rc \
-    vendor/motorola/lyriq/proprietary/vendor/etc/init/netdagent.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/netdagent.rc \
     vendor/motorola/lyriq/proprietary/vendor/etc/init/nvram_daemon.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/nvram_daemon.rc \
     vendor/motorola/lyriq/proprietary/vendor/etc/init/tee.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/tee.rc \
     vendor/motorola/lyriq/proprietary/vendor/etc/init/trustonic.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/trustonic.rc \
@@ -1139,7 +1137,6 @@ PRODUCT_PACKAGES += \
     vendor.mediatek.hardware.composer_ext@1.0 \
     vendor.mediatek.hardware.gnss-V2-ndk \
     vendor.mediatek.hardware.lbs-V1-ndk \
-    vendor.mediatek.hardware.lbs@1.0 \
     vendor.mediatek.hardware.mdmonitor-V1-ndk \
     vendor.mediatek.hardware.mdmonitor@1.0 \
     vendor.mediatek.hardware.mmagent-V1-ndk \
@@ -1164,7 +1161,6 @@ PRODUCT_PACKAGES += \
     vendor.mediatek.hardware.mtkradioex.smartratswitch-V1-ndk \
     vendor.mediatek.hardware.mtkradioex.voice-V1-ndk \
     vendor.mediatek.hardware.netdagent-V1-ndk \
-    vendor.mediatek.hardware.netdagent@1.0 \
     vendor.mediatek.hardware.nvram-V1-ndk \
     vendor.mediatek.hardware.power@2.0 \
     vendor.mediatek.hardware.pq_aidl-V2-ndk \
@@ -1247,8 +1243,8 @@ PRODUCT_PACKAGES += \
     ImsService \
     MtkGbaService \
     MtkTelephonyAssist \
-    moto-telephony \
     mediatek-ims-base \
+    moto-telephony \
     mediatek-ims-oem-plugin \
     CommandService.xml \
     android.hardware.audio.effect.service-aidl.xml \
@@ -1315,7 +1311,6 @@ PRODUCT_PACKAGES += \
     mtk_lbs_service \
     mtk_storageproxyd \
     muxreport \
-    netdagent \
     nvram_daemon \
     nxpnfcinfo \
     rcs_volte_stack \
@@ -1353,3 +1348,6 @@ PRODUCT_PACKAGES += \
     vendor_lib64_libnir_neon_driver_so \
     vendor_lib64_libpq_sec_so \
     vendor_lib64_libpqparamparser_so
+
+PRODUCT_BOOT_JARS += \
+    mediatek-ims-base

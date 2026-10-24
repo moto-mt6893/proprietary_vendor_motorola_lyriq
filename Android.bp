@@ -12044,12 +12044,12 @@ cc_prebuilt_library_shared {
                 "libutils",
                 "libcutils",
                 "mot_lyriq_ov50e_mipi_raw_IdxMgr",
-                "mot_lyriq_ov50a_mipi_raw_row_IdxMgr",
                 "mot_lyriq_ov50a_mipi_raw_IdxMgr",
-                "mot_lyriq_ov32b_mipi_raw_IdxMgr",
+                "mot_lyriq_ov50a_mipi_raw_row_IdxMgr",
                 "mot_lyriq_ov32b_mipi_raw_row_IdxMgr",
-                "mot_lyriq_hi1336_mipi_raw_IdxMgr",
+                "mot_lyriq_ov32b_mipi_raw_IdxMgr",
                 "mot_lyriq_hi1336_mipi_raw_row_IdxMgr",
+                "mot_lyriq_hi1336_mipi_raw_IdxMgr",
                 "mtk000_mipi_raw_IdxMgr",
                 "libc++",
                 "libc",
@@ -12117,12 +12117,12 @@ cc_prebuilt_library_shared {
                 "libSonyIMX338PdafLibraryWrapper",
                 "libSonyIMX519PdafLibraryWrapper",
                 "mot_lyriq_ov50e_mipi_raw_IdxMgr",
-                "mot_lyriq_ov50a_mipi_raw_row_IdxMgr",
                 "mot_lyriq_ov50a_mipi_raw_IdxMgr",
-                "mot_lyriq_ov32b_mipi_raw_IdxMgr",
+                "mot_lyriq_ov50a_mipi_raw_row_IdxMgr",
                 "mot_lyriq_ov32b_mipi_raw_row_IdxMgr",
-                "mot_lyriq_hi1336_mipi_raw_IdxMgr",
+                "mot_lyriq_ov32b_mipi_raw_IdxMgr",
                 "mot_lyriq_hi1336_mipi_raw_row_IdxMgr",
+                "mot_lyriq_hi1336_mipi_raw_IdxMgr",
                 "mtk000_mipi_raw_IdxMgr",
                 "libmtkcam_modulehelper",
                 "libc++",
@@ -21358,34 +21358,6 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "vendor.mediatek.hardware.lbs@1.0",
-    owner: "motorola",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/vendor.mediatek.hardware.lbs@1.0.so",
-            ],
-            shared_libs: [
-                "libhidlbase",
-                "liblog",
-                "libutils",
-                "libcutils",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
     name: "vendor.mediatek.hardware.mdmonitor-V1-ndk",
     owner: "motorola",
     strip: {
@@ -22014,34 +21986,6 @@ cc_prebuilt_library_shared {
             ],
             shared_libs: [
                 "libbinder_ndk",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "vendor.mediatek.hardware.netdagent@1.0",
-    owner: "motorola",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/vendor.mediatek.hardware.netdagent@1.0.so",
-            ],
-            shared_libs: [
-                "libhidlbase",
-                "liblog",
-                "libutils",
-                "libcutils",
                 "libc++",
                 "libc",
                 "libm",
@@ -24332,20 +24276,19 @@ android_app_import {
 }
 
 dex_import {
+    name: "mediatek-ims-base",
+    owner: "motorola",
+    jars: [
+        "proprietary/system/framework/mediatek-ims-base.jar",
+    ],
+}
+
+dex_import {
     name: "moto-telephony",
     owner: "motorola",
     jars: [
         "proprietary/system/framework/moto-telephony.jar",
     ],
-}
-
-dex_import {
-    name: "mediatek-ims-base",
-    owner: "motorola",
-    jars: [
-        "proprietary/system_ext/framework/mediatek-ims-base.jar",
-    ],
-    system_ext_specific: true,
 }
 
 dex_import {
@@ -25690,38 +25633,6 @@ cc_prebuilt_binary {
             shared_libs: [
                 "libmtkrillog",
                 "libmtkproperty",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    strip: {
-        none: true,
-    },
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_binary {
-    name: "netdagent",
-    owner: "motorola",
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/bin/netdagent",
-            ],
-            shared_libs: [
-                "libbase",
-                "libcutils",
-                "liblog",
-                "libforkexecwrap",
-                "libutils",
-                "libifcutils_mtk",
-                "libbinder_ndk",
-                "vendor.mediatek.hardware.netdagent-V1-ndk",
                 "libc++",
                 "libc",
                 "libm",
